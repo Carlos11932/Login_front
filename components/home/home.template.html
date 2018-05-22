@@ -1,0 +1,11 @@
+<h1>Hi {{$ctrl.currentUser.userFirstName}}!</h1>
+<p>Te has identificado</p>
+<h3>usuarios identificados:</h3>
+<ul>
+    <li ng-repeat="user in $ctrl.users">
+        {{user.username}} ({{user.firstName}} {{user.lastName}})
+        - <a ng-click="$ctrl.deleteUser(user._id)">Eliminar</a>
+    </li>
+</ul>
+<p>&nbsp;</p>
+<p><a href="#!/login" class="btn btn-primary">Logout</a></p>
